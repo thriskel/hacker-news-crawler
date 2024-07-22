@@ -30,6 +30,9 @@ class Post(models.Model):
         ]
     )
 
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
     @classmethod
     def update_posts_details(cls, posts_details):
         """
@@ -48,7 +51,6 @@ class Post(models.Model):
                     if getattr(post, field) != value:
                         setattr(post, field, value)
                 post.save()
-            finally:
-                posts.append(post)
+            posts.append(post)
 
         return posts
