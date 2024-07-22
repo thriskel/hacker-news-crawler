@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Internal apps
     'crawler',
+    'interactions',
     # External apps
     'rest_framework',
     'django_filters'
@@ -133,4 +134,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # URL TO OBTAIN THE DATA FROM
-HACKER_RANK_NEWS_URL = 'https://something.something.something'
+HACKER_RANK_NEWS_URL = 'https://news.ycombinator.com/'

@@ -4,6 +4,8 @@ from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
+from interactions import models as interactions_models
+
 from .scraper import HRScraper
 from . import models as crawler_models
 from . import serializers as crawler_serializers
@@ -43,6 +45,10 @@ class Crawler(APIView):
 
         crawler_models.Post.update_posts_details(
             posts_details
+        )
+
+        interactions_models.Interaction.create_interaction(
+            request.query_params
         )
 
         queryset = self.filter_post(

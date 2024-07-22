@@ -17,9 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from crawler import urls as crawler_urls
+from interactions import urls as interactions_urls
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('news/', include(crawler_urls))
+    path('news/', include(crawler_urls)),
+    path('interactions/', include(interactions_urls))
 ]
