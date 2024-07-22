@@ -38,6 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Internal apps
+    'crawler',
+    # External apps
+    'rest_framework',
+    'django_filters'
 ]
 
 MIDDLEWARE = [
@@ -126,3 +131,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# URL TO OBTAIN THE DATA FROM
+HACKER_RANK_NEWS_URL = 'https://something.something.something'
